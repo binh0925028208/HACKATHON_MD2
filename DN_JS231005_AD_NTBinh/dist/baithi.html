@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADVANCED HACKATHON</title>
+    <link rel="stylesheet" href="./baithi.css" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="jobBox">
+      <h2>Danh sách công việc</h2>
+      <div class="inputJob">
+        <input
+          type="text"
+          id="jobInput"
+          placeholder="Nhập tên công việc"
+          autofocus
+        />
+        <button class="addJobBtn" onclick="onAddJob()">Thêm</button>
+      </div>
+      <div class="jobContent" id="todoList"></div>
+      <div id="noJob">
+        <img src="../assets/no-job-rubber-stamp-vector-11854595.jpg" alt="" />
+      </div>
+      <div id="checkingJob">
+        <div class="checkingJob">
+          <p>
+            Công việc đã hoàn thành: <span><strong>0/ 1</strong></span>
+          </p>
+        </div>
+      </div>
+      <div id="doneJob">
+        <div class="doneJob">
+          <i class="fa-solid fa-circle-check"></i>
+          <p>Công việc hoàn thành.</p>
+        </div>
+      </div>
+    </div>
+    <div id="popUpForEdit">
+      <div id="popUpBody">
+        <div class="popUpBox">
+          <h2>Cập nhật công việc</h2>
+          <p>Tên công việc</p>
+          <div id="valueNow">
+            <input
+              type="text"
+              id="jobEditValue"
+              placeholder="Tên công việc mới"
+            />
+          </div>
+          <div class="popUpBtn">
+            <button class="cancelBtn" onclick="onCancelBtn()">Hủy</button>
+            <button class="okBtn" onclick="okBtn()">Đồng ý</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="baithi.js"></script>
+  <script>
+    renderJob();
+  </script>
+</html>
