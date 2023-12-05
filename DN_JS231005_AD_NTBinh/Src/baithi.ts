@@ -81,13 +81,13 @@ function renderJob(): void {
     displaynone.style.display = "none";
     showTotalJob.style.display = "block";
     doneJob.style.display = "none";
-    let count = 0;
+    let count: number = 0;
     renderTodo.innerHTML = ``;
     jobList.forEach((item: TodoList) => {
       if (item.status == true) {
         count++;
         renderTodo.innerHTML += `<div id="jobText" style="text-decoration: line-through;">
-      <input type="checkbox" onclick="onChangeStatus(${item.id})"/>
+      <input checked type="checkbox" onclick="onChangeStatus(${item.id})"/>
       <p>${item.context}</p>
       <div class="editBtn">
         <button onclick="onEdit(${item.id})">

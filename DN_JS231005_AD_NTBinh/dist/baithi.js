@@ -62,7 +62,7 @@ function renderJob() {
             if (item.status == true) {
                 count++;
                 renderTodo.innerHTML += `<div id="jobText" style="text-decoration: line-through;">
-      <input type="checkbox" onclick="onChangeStatus(${item.id})"/>
+      <input checked type="checkbox" onclick="onChangeStatus(${item.id})"/>
       <p>${item.context}</p>
       <div class="editBtn">
         <button onclick="onEdit(${item.id})">
