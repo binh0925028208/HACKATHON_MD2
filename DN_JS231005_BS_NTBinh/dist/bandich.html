@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <title>HACKATHON BASIC</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Blog cá nhân</h1>
+    </header>
+    <main>
+      <div class="addPost">
+        <div class="addBox">
+          <h2>Thêm mới bài viết</h2>
+          <p>Tiêu đề</p>
+          <input type="text" id="postTitle" placeholder="Tiêu đề bài viết" />
+          <p>Nội dung</p>
+          <textarea
+            id="postText"
+            cols="30"
+            rows="5"
+            placeholder="Nội dung bài viết"
+          ></textarea>
+          <button onclick="onAdd()">
+            <p>Thêm bài viết</p>
+          </button>
+        </div>
+      </div>
+      <div class="postList" id="postMini"></div>
+      <div id="modal">
+        <div class="modal">
+          <div class="modalBox">
+            <textarea
+              id="commentText"
+              cols="5"
+              rows="5"
+              placeholder="Nhập bình luận của bạn"
+            ></textarea>
+            <button onclick="addComment()">Đăng bình luận</button>
+            <button onclick="closeModal()">Thoát</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./baibasic.js"></script>
+    <script>
+      renderPost();
+    </script>
+  </body>
+</html>
